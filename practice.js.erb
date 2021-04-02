@@ -1,0 +1,17 @@
+$("#error_messages").remove()
+<% if @comment.errors.present? %>
+$("#new_comment").prepend("")
+<% else %>
+$("#js-table-comment").prepend("")
+$("#js-new-comment-body").val('')
+<% end %>
+
+//<table id="js-table-comment" class="table">
+"<%= j(render('shared/error_messages',object: @object)) %>"
+"<%= j(render('shared/error_messages',object: @object)) %>"
+"<%= j(render('shared/error_messages',object: @object)) %>"
+
+$("#error_messages").remove()
+$("#new_comment").prepend("<%= j(render('shared/error_messages',object: @object)) %>\n")
+$("#js-table-comment").prepend("<%= j(render('comments/comment',comment: @comment)) %>\n")
+$("#js-new-comment-body").val('')

@@ -1,0 +1,11 @@
+ja:
+  activerecord:
+    models:
+    attributes:
+      user:
+      board:
+      comment:
+  attributes:
+    id:
+    created_at:
+    updated_at:
